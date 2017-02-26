@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.karbaros.myapp.HomeActivity"
+        >
+
+
+        <Button
+            android:id="@+id/blankApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Blank App" />
+
+        <Button
+            android:id="@+id/newActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="New Activity" />
+
+        <Button
+            android:id="@+id/greetApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Greet App" />
+
+        <Button
+            android:id="@+id/calculatorApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Calculator" />
+
+        <Button
+            android:id="@+id/benchmarkApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Benchmark App" />
+
+        <Button
+            android:id="@+id/basicCalculatorApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Basic Calculator" />
+
+        <Button
+            android:id="@+id/userRegV1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="User Registration V1" />
+
+        <Button
+            android:id="@+id/userRegV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="User Registration V2" />
+        <Button
+            android:id="@+id/musicPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Music Player" />
+        <Button
+            android:id="@+id/currencyConverterApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Currency Converter" />
+        <Button
+            android:id="@+id/instaCloneApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Instagram Clone" />
+        <!--<Button
+            android:id="@+id/singleSongPlayerApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/btnblue"
+            android:onClick="activityIntent"
+            android:text="Single song player" />-->
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_basic_calculator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:weightSum="1"
+    tools:context="com.karbaros.myapp.BasicCalculatorActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvOperation"
+        android:layout_width="match_parent"
+        android:layout_height="169dp"
+        android:layout_weight="0.53"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:singleLine="false"
+        android:theme="@style/AlertDialog.AppCompat.Light" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:columnCount="4"
+        android:rowCount="4">
+
+
+        <Button
+            android:id="@+id/btnClear"
+            android:onClick="doClear"
+            android:text="C"
+            android:layout_width="wrap_content" />
+
+        <Button
+            android:id="@+id/btnBackSpace"
+            android:onClick="doDelete"
+            android:text="Del" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:onClick="doPrint"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/btnmultiply"
+            android:onClick="doPrint"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btnSeven"
+            android:onClick="doPrint"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btnEight"
+            android:onClick="doPrint"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btnNine"
+            android:onClick="doPrint"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnSubstract"
+            android:onClick="doPrint"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnFour"
+            android:onClick="doPrint"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btnFive"
+            android:onClick="doPrint"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btnSix"
+            android:onClick="doPrint"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:onClick="doPrint"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnOne"
+            android:onClick="doPrint"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btnTwo"
+            android:onClick="doPrint"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btnThree"
+            android:onClick="doPrint"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_height="95dp"
+            android:layout_rowSpan="2"
+            android:onClick="doCalcute"
+            android:text="=" />
+
+        <Button
+            android:id="@+id/btnMod"
+            android:onClick="doPrint"
+            android:text="%" />
+
+        <Button
+            android:id="@+id/btnZero"
+            android:onClick="doPrint"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnDecimalPoint"
+            android:onClick="doPrint"
+            android:text="." />
+
+
+    </GridLayout>
+</LinearLayout>
