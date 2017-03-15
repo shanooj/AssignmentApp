@@ -1,149 +1,603 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@drawable/bg"
+    android:orientation="vertical">
 
 
-
-
-
-
-
-
-    <GridLayout
-        tools:context="com.karbaros.myapp.ActivityNavigater"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/activity_navigater"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:columnCount="4"
-        android:rowCount="10"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
+        android:layout_height="match_parent">
 
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button2" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button3" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button4" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button5" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button6" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="174dp"
-            android:layout_height="200dp"
-            android:id="@+id/button7"
-            android:layout_rowSpan="2"
-            android:layout_columnSpan="2"/>
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button8" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button9" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button10" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="174dp"
-            android:layout_height="200dp"
-            android:id="@+id/button11"
-            android:layout_columnSpan="2"
-            android:layout_rowSpan="2"/>
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button12" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button13" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button14" />
-
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button15" />
-
-        <ImageButton
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/banner"
-            android:id="@+id/imageButton3"
-            android:layout_columnSpan="4"
-            android:layout_rowSpan="3"/>
+            android:orientation="vertical">
 
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button16" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button17" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
 
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button18" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
 
-        <Button
-            android:text="Button"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:id="@+id/button19" />
-    </GridLayout>
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
 
-</ScrollView>
+                            <ImageButton
+                                android:id="@+id/ibtnMusicPlayer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/music_player" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnInstagramClone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/paint_palette" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnCurrencyConverter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_rupee_indian" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnBlankActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_blank" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/semiTransparent">
+
+                        <ImageButton
+                            android:id="@+id/ibtnCalculator"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent"
+                            android:onClick="navigateActivity"
+                            android:src="@drawable/calculator_1" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginTop="3dp"
+                            android:background="@color/transparent"
+                            android:gravity="center"
+                            android:padding="4dp"
+                            android:paddingTop="4dp"
+                            android:text="Calculator"
+                            android:textColor="@color/white" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="3dp"
+                android:background="@color/semiTransparent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/ibtnUserRegV1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="3.1"
+                    android:background="@color/transparent"
+                    android:onClick="navigateActivity"
+                    android:text="User registration"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:background="@color/transparent"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_person_add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/semiTransparent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent">
+
+                    <ImageButton
+                        android:id="@+id/ibtnBenchmark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        android:onClick="navigateActivity"
+                        android:src="@drawable/measurer" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:paddingTop="4dp"
+                        android:text="Benchmark"
+                        android:textColor="@color/white" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent">
+
+                    <ImageButton
+                        android:id="@+id/ibGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent"
+                        android:onClick="navigateActivity"
+                        android:src="@drawable/ic_photo_library" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnNewActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="New Activity"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnGreetUser"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="Greet User"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnBasicCalculator"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="CalC"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnOnResultActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="OnResultActivity"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/semiTransparent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnUserRevV2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="3.1"
+                    android:background="@color/transparent"
+                    android:onClick="navigateActivity"
+                    android:text="User registration V2"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:background="@color/transparent"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_person_add" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnCamera"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/camera" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_message" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnDialPad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_dialpad" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnEmertgancyCall"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_call" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnWatsapp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_watsapp" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnWebView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_grid_world" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="3dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+                                android:id="@+id/ibtnAnimation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_tune" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1"
+                            android:background="@color/semiTransparent"
+                            android:padding="12dp">
+
+                            <ImageButton
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/transparent"
+                                android:onClick="navigateActivity"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/ic_blank" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

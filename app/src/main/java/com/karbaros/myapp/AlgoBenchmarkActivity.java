@@ -182,5 +182,7 @@ public class AlgoBenchmarkActivity extends AppCompatActivity {
 
         }
 
+        }
+
     }
-}
+

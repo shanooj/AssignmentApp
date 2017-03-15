@@ -11,61 +11,61 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 
-
 public class BasicCalculatorActivity extends AppCompatActivity {
 
     TextView expressionString;
+    private ScriptEngineManager manager;
 
     public void doPrint(View view) {
         switch (view.getId()) {
-            case R.id.btnOne :
+            case R.id.btnOne:
                 expressionString.append("1 ");
                 break;
-            case R.id.btnTwo :
+            case R.id.btnTwo:
                 expressionString.append("2 ");
                 break;
-            case R.id.btnThree :
+            case R.id.btnThree:
                 expressionString.append("3 ");
                 break;
-            case R.id.btnFour :
+            case R.id.btnFour:
                 expressionString.append("4 ");
                 break;
-            case R.id.btnFive :
+            case R.id.btnFive:
                 expressionString.append("5 ");
                 break;
-            case R.id.btnSix :
+            case R.id.btnSix:
                 expressionString.append("6 ");
                 break;
-            case R.id.btnSeven :
+            case R.id.btnSeven:
                 expressionString.append("7 ");
                 break;
-            case R.id.btnEight :
+            case R.id.btnEight:
                 expressionString.append("8 ");
                 break;
-            case R.id.btnNine :
+            case R.id.btnNine:
                 expressionString.append("9 ");
                 break;
-            case R.id.btnZero :
+            case R.id.btnZero:
                 expressionString.append("0 ");
                 break;
 
-            case R.id.btnDecimalPoint :
+            case R.id.btnDecimalPoint:
                 expressionString.append(".");
                 break;
 
-            case R.id.btnAdd :
+            case R.id.btnAdd:
                 expressionString.append("+ ");
                 break;
-            case R.id.btnSubstract :
+            case R.id.btnSubstract:
                 expressionString.append("- ");
                 break;
-            case R.id.btnmultiply :
+            case R.id.btnmultiply:
                 expressionString.append("* ");
                 break;
-            case R.id.btnDivide :
+            case R.id.btnDivide:
                 expressionString.append("/ ");
                 break;
-            case R.id.btnMod :
+            case R.id.btnMod:
                 expressionString.append("% ");
                 break;
             default:
@@ -85,8 +85,9 @@ public class BasicCalculatorActivity extends AppCompatActivity {
 
 
     }
+
     public void doCalcute(View view) {
-        ScriptEngineManager manager = new ScriptEngineManager();
+        manager = new ScriptEngineManager();
         ScriptEngine sEngine = manager.getEngineByName("JavaScript");
         try {
             Object result = sEngine.eval(expressionString.getText().toString());

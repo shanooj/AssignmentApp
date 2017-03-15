@@ -40,7 +40,8 @@
             android:ems="10"
             android:inputType="number"
             android:background="@drawable/textbox"
-            android:padding="5dp" />
+            android:padding="5dp"
+            android:layout_marginBottom="2dp"/>
 
         <Spinner
             android:id="@+id/spToCurrency"
@@ -62,15 +63,22 @@
             android:layout_marginTop="1dp" />
 
     </GridLayout>
-
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
     <Button
+        android:layout_gravity="center"
+
         android:onClick="doConvert"
         android:text="Convert"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/convertCurrency"
         android:background="@drawable/buttonshape"
         android:textSize="20sp"
         android:textColor="@color/btntextColor"
-        android:layout_marginTop="3dp" />
+        android:layout_marginTop="5dp" />
+    </LinearLayout>
 </LinearLayout>

@@ -1,8 +1,8 @@
 package com.karbaros.myapp;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -14,10 +14,12 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.blankApp:
                 Intent intentMainActivity = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(intentMainActivity);
+                /*this.overridePendingTransition(R.anim.anim_in_right,R.anim.anim_out_right);*/
                 break;
             case R.id.newActivity:
                 Intent intentNewActivity = new Intent(getBaseContext(), NewActivity.class);
                 startActivity(intentNewActivity);
+
                 break;
             case R.id.greetApp:
                 Intent intentGreetingActivity = new Intent(getBaseContext(), GreetingActivity.class);
@@ -51,14 +53,11 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intentCurrencyConverterActivity = new Intent(getBaseContext(), CurrencyConverterActivity.class);
                 startActivity(intentCurrencyConverterActivity);
                 break;
-            case R.id.instaCloneApp:
-                Intent intentInstagramCloneActivity = new Intent(getBaseContext(), InstagramClone.class);
-                startActivity(intentInstagramCloneActivity);
-                break;
-            /*case R.id.singleSongPlayerApp:
-                Intent intentSingleSongPlayerActivity = new Intent(getBaseContext(), SingleSongPlayer.class);
+
+            case R.id.btnInstagramClone:
+                Intent intentSingleSongPlayerActivity = new Intent(getBaseContext(), InstagramCloneActivity.class);
                 startActivity(intentSingleSongPlayerActivity);
-                break;*/
+                break;
             default:
                 break;
         }
@@ -68,6 +67,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        //Action bar
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setHomeButtonEnabled(true);
+
+        }
     }
 
     @Override

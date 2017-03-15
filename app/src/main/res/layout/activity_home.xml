@@ -16,7 +16,7 @@
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="com.karbaros.myapp.HomeActivity"
-        >
+        android:background="@color/colorPrimary">
 
 
         <Button
@@ -106,20 +106,12 @@
             android:onClick="activityIntent"
             android:text="Currency Converter" />
         <Button
-            android:id="@+id/instaCloneApp"
+            android:id="@+id/btnInstagramClone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="9dp"
             android:background="@drawable/btnblue"
             android:onClick="activityIntent"
             android:text="Instagram Clone" />
-        <!--<Button
-            android:id="@+id/singleSongPlayerApp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="9dp"
-            android:background="@drawable/btnblue"
-            android:onClick="activityIntent"
-            android:text="Single song player" />-->
     </LinearLayout>
 </ScrollView>

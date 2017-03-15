@@ -8,23 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.karbaros.myapp.utility.AppSupport;
+import com.karbaros.myapp.utility.SendMail;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Calendar;
-import java.util.Properties;
-
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.PasswordAuthentication;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 
 public class UserRegistrationVersion2 extends AppCompatActivity {
 
@@ -53,41 +41,9 @@ public class UserRegistrationVersion2 extends AppCompatActivity {
 
             startActivity(Intent.createChooser(email, "Send mail..."));*/
 
-            Properties props = new Properties();
-            try {
-                props.load(new FileInputStream(new File("setting/Setting.properties")));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            SendMail sendMail = new SendMail(this, emailAddress.getText().toString().trim(), subject, password);
 
-            mailUsername = props.getProperty("username");
-            mailPassword = props.getProperty("password");
-
-            Session session = Session.getInstance(props,
-                    new javax.mail.Authenticator() {
-                        protected PasswordAuthentication getPasswordAuthentication() {
-                            return new PasswordAuthentication(mailUsername, mailPassword);
-                        }
-                    });
-
-            try {
-
-                Message message = new MimeMessage(session);
-                message.setFrom(new InternetAddress(mailUsername));
-                message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(emailAddress.getText().toString()));
-                message.setSubject(subject);
-                message.setText(mailUsername);
-
-                Transport.send(message);
-
-                System.out.println("Done");
-
-            } catch (MessagingException e) {
-                throw new RuntimeException(e);
-            }
-
-
-            Toast.makeText(getBaseContext(),"Registration succsfull",Toast.LENGTH_LONG).show();
+            sendMail.execute();
         }
 
 
@@ -124,7 +80,7 @@ public class UserRegistrationVersion2 extends AppCompatActivity {
         if (f == 4)
             return true;
         else
-        return false;
+            return false;
 
         // Log.i(TAG,password );
     }

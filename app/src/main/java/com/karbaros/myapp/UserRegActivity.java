@@ -8,6 +8,8 @@ import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.view.View;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -26,6 +28,7 @@ public class UserRegActivity extends AppCompatActivity {
     private EditText mobile;
     private EditText password;
     private EditText rePassword;
+
 
 
     public void doRegister(View view) {
@@ -68,7 +71,10 @@ public class UserRegActivity extends AppCompatActivity {
         }
         if (presentYear - year > 60)
             dob.setError("Age must be less than 60");
+
+
     }
+
 
 
     @Override
@@ -81,6 +87,8 @@ public class UserRegActivity extends AppCompatActivity {
         mobile = (EditText) findViewById(R.id.etMobile);
         password = (EditText) findViewById(R.id.etpassword);
         rePassword = (EditText) findViewById(R.id.etRePassword);
+
+
 
         //Action bar
         if (getSupportActionBar() != null) {

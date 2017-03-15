@@ -2,12 +2,12 @@ package com.karbaros.myapp;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.HashMap;
 
@@ -46,11 +46,9 @@ public class CurrencyConverterActivity extends AppCompatActivity {
 
             switch (fromCurrency) {
                 case "INR":
-
                     switch (toCurrency) {
                         case "INR":
                             Double d = 0.0;
-
                             d = rupeesRate.get(toCurrency) * fromCurrencyValue;
                             etToCurrency.setText(Double.toString(d));
                             break;
@@ -200,6 +198,8 @@ public class CurrencyConverterActivity extends AppCompatActivity {
         etToCurrency = (EditText) findViewById(R.id.etToCurrency);
         etFromCurrency = (EditText) findViewById(R.id.etFromCurrency);
 
+        etFromCurrency.addTextChangedListener(fromCurrencyWatcher);
+
         // currency values
         //Action bar
         if (getSupportActionBar() != null) {
@@ -209,6 +209,18 @@ public class CurrencyConverterActivity extends AppCompatActivity {
         }
 
     }
+
+    private final TextWatcher fromCurrencyWatcher = new TextWatcher() {
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+        }
+
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+        }
+
+        public void afterTextChanged(Editable s) {
+
+        }
+    };
 
     @Override
     protected void onStart() {
@@ -250,4 +262,5 @@ public class CurrencyConverterActivity extends AppCompatActivity {
 
 
     }
+
 }
