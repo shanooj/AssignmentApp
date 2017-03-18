@@ -3,13 +3,15 @@ package com.karbaros.myapp;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.text.format.DateFormat;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TimePicker;
@@ -28,7 +30,8 @@ public class UserRegActivity extends AppCompatActivity {
     private EditText mobile;
     private EditText password;
     private EditText rePassword;
-
+    private Animation animShake;
+    private Vibrator mVibrator;
 
 
     public void doRegister(View view) {
@@ -48,9 +51,12 @@ public class UserRegActivity extends AppCompatActivity {
         }
 
 
-        if (userName.getText().toString().equals(""))
+        if (userName.getText().toString().equals("")) {
+            mVibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            mVibrator.vibrate(100);
+            userName.startAnimation(animShake);
             userName.setError("Please Enter Name");
-
+        }
         if (email.getText().toString().equals("")) {
             email.setError("Please enter Email");
         } else {
@@ -76,7 +82,6 @@ public class UserRegActivity extends AppCompatActivity {
     }
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +92,7 @@ public class UserRegActivity extends AppCompatActivity {
         mobile = (EditText) findViewById(R.id.etMobile);
         password = (EditText) findViewById(R.id.etpassword);
         rePassword = (EditText) findViewById(R.id.etRePassword);
-
+        animShake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.anim_shake);
 
 
         //Action bar

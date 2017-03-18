@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
@@ -54,7 +55,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/music_player" />
+                                app:srcCompat="@drawable/music_player" />
 
                         </FrameLayout>
 
@@ -73,7 +74,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/paint_palette" />
+                                app:srcCompat="@drawable/paint_palette" />
 
                         </FrameLayout>
 
@@ -103,7 +104,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_rupee_indian" />
+                                app:srcCompat="@drawable/ic_rupee_indian" />
 
                         </FrameLayout>
 
@@ -122,7 +123,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_blank" />
+                                app:srcCompat="@drawable/ic_blank" />
 
                         </FrameLayout>
 
@@ -153,7 +154,7 @@
                             android:layout_gravity="center"
                             android:background="@color/transparent"
                             android:onClick="navigateActivity"
-                            android:src="@drawable/calculator_1" />
+                            app:srcCompat="@drawable/calculator_1" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -203,7 +204,7 @@
                     android:background="@color/transparent"
                     android:padding="12dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_person_add" />
+                    app:srcCompat="@drawable/ic_person_add" />
             </LinearLayout>
 
             <LinearLayout
@@ -231,7 +232,7 @@
                         android:layout_gravity="center"
                         android:background="@color/transparent"
                         android:onClick="navigateActivity"
-                        android:src="@drawable/measurer" />
+                        app:srcCompat="@drawable/measurer" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -262,7 +263,7 @@
                         android:layout_gravity="center"
                         android:background="@color/transparent"
                         android:onClick="navigateActivity"
-                        android:src="@drawable/ic_photo_library" />
+                        app:srcCompat="@drawable/ic_photo_library" />
                 </FrameLayout>
 
             </LinearLayout>
@@ -364,7 +365,7 @@
                     android:background="@color/transparent"
                     android:padding="12dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/ic_person_add" />
+                    app:srcCompat="@drawable/ic_person_add" />
             </LinearLayout>
 
             <LinearLayout
@@ -406,7 +407,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/camera" />
+                                app:srcCompat="@drawable/camera" />
 
                         </FrameLayout>
 
@@ -425,7 +426,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_message" />
+                                app:srcCompat="@drawable/ic_message" />
 
                         </FrameLayout>
 
@@ -455,7 +456,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_dialpad" />
+                                app:srcCompat="@drawable/ic_dialpad" />
 
                         </FrameLayout>
 
@@ -474,7 +475,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_call" />
+                                app:srcCompat="@drawable/ic_call" />
 
                         </FrameLayout>
 
@@ -515,7 +516,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_watsapp" />
+                                app:srcCompat="@drawable/ic_watsapp" />
 
                         </FrameLayout>
 
@@ -534,7 +535,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_grid_world" />
+                                app:srcCompat="@drawable/ic_grid_world" />
 
                         </FrameLayout>
 
@@ -564,7 +565,7 @@
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_tune" />
+                                app:srcCompat="@drawable/ic_tune" />
 
                         </FrameLayout>
 
@@ -577,13 +578,13 @@
                             android:padding="12dp">
 
                             <ImageButton
-
+                                android:id="@+id/ibtnShakeColorChange"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:background="@color/transparent"
                                 android:onClick="navigateActivity"
                                 android:scaleType="centerInside"
-                                android:src="@drawable/ic_blank" />
+                                app:srcCompat="@drawable/ic_screen_rotation" />
 
                         </FrameLayout>
 
@@ -594,6 +595,144 @@
 
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="3dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="1dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnListViewActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="List view"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnSensorActivity"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="Sensor List"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btnSensorValue"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:gravity="center"
+                    android:onClick="navigateActivity"
+                    android:padding="16dp"
+                    android:text="senson value"
+                    android:textColor="@color/white" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/semiTransparent"
+                    android:padding="12dp">
+
+                    <ImageButton
+                        android:id="@+id/ibtnCompass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparent"
+                        android:onClick="navigateActivity"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/ic_compass" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/semiTransparent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnShakeDetection"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="3.1"
+                    android:background="@color/transparent"
+                    android:onClick="navigateActivity"
+                    android:text="Shake direction Detection"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:background="@color/transparent"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_screen_rotation" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/semiTransparent"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <Button
+                    android:id="@+id/btnNoti"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_weight="3.1"
+                    android:background="@color/transparent"
+                    android:onClick="navigateActivity"
+                    android:text="Notification"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".9"
+                    android:background="@color/transparent"
+                    android:padding="12dp"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/ic_screen_rotation" />
+            </LinearLayout>
+
+
 
 
         </LinearLayout>

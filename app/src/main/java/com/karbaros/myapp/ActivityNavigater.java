@@ -151,6 +151,34 @@ public class ActivityNavigater extends AppCompatActivity {
                 Intent intentAnimation = new Intent(getBaseContext(),AnimationActivity.class);
                 startActivity(intentAnimation);
                 break;
+            case R.id.btnListViewActivity:
+                Intent intentListview = new Intent(getBaseContext(),ListViewDemo.class);
+                startActivity(intentListview);
+                break;
+            case R.id.btnSensorActivity:
+                Intent intentSensorList = new Intent(getBaseContext(),SensorList.class);
+                startActivity(intentSensorList);
+                break;
+            case R.id.btnSensorValue:
+                Intent intentSensorValue = new Intent(getBaseContext(),SensorValueActivity.class);
+                startActivity(intentSensorValue);
+                break;
+            case R.id.ibtnCompass:
+                Intent intentCompass = new Intent(getBaseContext(),CompassActivity.class);
+                startActivity(intentCompass);
+                break;
+            case R.id.ibtnShakeColorChange:
+                Intent intentShakeColorChange = new Intent(getBaseContext(),ColorChangeOnShakeActivity.class);
+                startActivity(intentShakeColorChange);
+                break;
+            case R.id.btnShakeDetection:
+                Intent intentShakeDetection = new Intent(getBaseContext(),ShakeDirectionActivity.class);
+                startActivity(intentShakeDetection);
+                break;
+            case R.id.btnNoti:
+                Intent intentNoti = new Intent(getBaseContext(),NotificationDemoActivity.class);
+                startActivity(intentNoti);
+                break;
             default:
                 break;
         }
