@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_instagram_clone2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|end"
+    android:orientation="vertical"
+    tools:context="com.karbaros.myapp.InstagramCloneActivity">
+
+
+    <ImageView
+        android:id="@+id/ivResultImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:srcCompat="@drawable/cover"
+
+        android:layout_weight="1"
+        android:padding="16dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="2dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="original"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/ivThumbOriginal"
+                    android:scaleType="centerCrop"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:onClick="applyFilter"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="grayScale"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/ivThumbGrayScale"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:onClick="applyFilter"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="Snow Effect"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/ivThumbSnowEffect"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:onClick="applyFilter"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="Brightness"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/ivThumbBrightness"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:onClick="applyFilter"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="Dark"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/ivThumbDark"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:onClick="applyFilter"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </FrameLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:text="Reflection"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/ivThumbReflection"
+                    android:scaleType="centerCrop"
+                    android:layout_marginLeft="2dp"
+                    android:layout_width="75dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="20dp"
+                    android:onClick="applyFilter"
+                    app:srcCompat="@mipmap/ic_launcher" />
+            </FrameLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+</LinearLayout>
+

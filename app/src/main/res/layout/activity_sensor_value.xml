@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.karbaros.myapp.SensorValueActivity"
+    tools:layout_editor_absoluteY="112dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <TextView
+        android:id="@+id/tvAccelator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accelerometer "
+        android:layout_marginLeft="153dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="33dp" />
+
+    <TextView
+        android:id="@+id/tvXValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="x Value"
+        android:layout_marginTop="87dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvAccelator"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tvAccelator" />
+
+    <TextView
+        android:id="@+id/tvYValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="y value"
+        android:layout_marginTop="143dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvXValue"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tvAccelator" />
+
+    <TextView
+        android:id="@+id/tvZValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="z value"
+        android:layout_marginTop="129dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvYValue"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/tvAccelator" />
+
+</android.support.constraint.ConstraintLayout>
